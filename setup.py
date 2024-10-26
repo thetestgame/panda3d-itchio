@@ -3,7 +3,7 @@ import os
 
 setup(
     name='panda3d_itchio',
-    description='A collection of helpful utility methods and constants for working with the Panda3D game engine',
+    description='Panda3D module for interacting with Itch.io's game apis and launcher.',
     long_description=open("README.md", 'r').read(),
     long_description_content_type='text/markdown',
     license='MIT',

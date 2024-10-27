@@ -2,6 +2,9 @@
 
 # Panda3D Itch.io
 
+[![Build, Test, and Publish](https://github.com/thetestgame/panda3d-itchio/actions/workflows/main.yml/badge.svg)](https://github.com/thetestgame/panda3d-itchio/actions/workflows/main.yml)
+![PyPI - Version](https://img.shields.io/pypi/v/panda3d-itchio)
+
 This Python module adds Itchio Launcher support to the Panda3D game engine, enabling user authentication,
 ownership verification, and purchase verification inside your Panda3D application.
 

@@ -29,6 +29,7 @@ jobs:
     # Install dependencies
     - name: Install dependencies
       run: |
+        python -m ensurepip
         python -m pip install --upgrade pip
         pip install build
 
@@ -43,9 +44,9 @@ jobs:
     # Build the package using the version
     - name: Build package
       run: |
-        export MAJOR=$(echo ${{ steps.package-version.outputs.major }})
-        export MINOR=$(echo ${{ steps.package-version.outputs.minor }})
-        export PATCH=$(echo ${{ steps.package-version.outputs.patch }})
+        export MAJOR=${{ steps.package-version.outputs.major }}
+        export MINOR=${{ steps.package-version.outputs.minor }}
+        export PATCH=${{ steps.package-version.outputs.patch }}
 
         echo "Building version $MAJOR.$MINOR.$PATCH"
         python -m build

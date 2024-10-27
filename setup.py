@@ -37,29 +37,22 @@ def get_version() -> str:
 
     return f'{major}.{minor}.{patch}'
 
-def get_readme(file_path: str = 'README.md') -> str:
+def get_readme(filename: str = 'README.md') -> str:
     """
     Returns the contents of the requested README file
     """
 
-    with open(file_path, 'r') as f:
+    with open(filename, 'r') as f:
         return f.read()
 
-def get_requirements(file_path: str = 'requirements.txt') -> list:
+def get_requirements(filename: str = 'requirements.txt') -> list:
     """
     Returns the contents of the requested requirements.txt
     file
     """
 
-    try: # for pip >= 10
-        from pip._internal.req import parse_requirements
-    except ImportError: # for pip <= 9.0.3
-        from pip.req import parse_requirements
-
-    install_reqs = parse_requirements(file_path, session='hack')
-    reqs = [str(ir.requirement) for ir in install_reqs]
-    
-    return reqs
+    with open(filename, 'r') as file:
+        return [line.strip() for line in file if line.strip() and not line.startswith('#')]
 
 def get_package_url(main_module: str) -> str:
     """

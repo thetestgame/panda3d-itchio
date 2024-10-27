@@ -82,7 +82,10 @@ def main() -> int:
         maintainer='Jordan Maxwell',
         url=get_package_url(module_name),
         packages=[module_name],
-        install_requires=get_requirements(),
+        install_requires=[
+            "panda3d",
+            "panda3d-rest"
+        ],
         classifiers=[
             'Programming Language :: Python :: 3',
         ])

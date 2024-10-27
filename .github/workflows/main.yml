@@ -42,7 +42,7 @@ jobs:
         export-env: false
       env:
         OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
-        SECRET: op://app-cicd/development/pypi-token
+        SECRET: op://development/msmp5ffdzke4oke7o627ufud6e/credential
 
     - name: Publish package
       uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29

@@ -24,11 +24,11 @@ pip install panda3d-itchio
 ## Usage
 
 ```python
-from panda3d_itchio import verify_launched_from_itchio
+from panda3d_itchio import launcher
 import sys
 
 # Exit if we have not been correctly launched.
-launcher_launched = verify_launched_from_itchio()
+launcher_launched = launcher.verify_launched_from_itchio()
 if launcher_launched == False:
     sys.exit(2)
 ```
